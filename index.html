@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surprise</title>
     <style>
-        body { text-align: center; font-family: sans-serif; background: #111; color: white; padding-top: 100px; }
-        button { padding: 12px 24px; margin: 10px; font-size: 18px; border-radius: 20px; border: none; cursor: pointer; }
+        body { text-align: center; font-family: sans-serif; background-color: #000; color: #fff; padding-top: 50px; }
+        button { padding: 12px 24px; margin: 10px; font-size: 18px; cursor: pointer; border: none; border-radius: 5px; }
         .yes { background: #ff8c00; color: white; }
         .no { background: #555; color: white; }
-        .video-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; }
+        .video-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; z-index: 999; }
         video { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
@@ -19,7 +19,7 @@
     <button class="no" onclick="playVideo()">No (ဟင့်အင်း)</button>
 
     <div class="video-container" id="vidBox">
-        <video id="myVideo" src="Screenrecorder-2026-06-02-16-01-14-160.mp4" controls autoplay></video>
+        <video id="myVideo" src="Screenrecorder-2026-06-02-16-01-14-160.mp4" controls playsinline autoplay muted></video>
     </div>
 
     <script>
@@ -28,6 +28,5 @@
             document.getElementById('myVideo').play();
         }
     </script>
-
 </body>
 </html>
